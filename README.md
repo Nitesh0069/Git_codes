@@ -1,115 +1,93 @@
 # 🖥️ GIT COMMANDS CHEAT SHEET
 
-## 🔧 Set configuration values for your username and email
-```sh
-git config --global user.name "YOUR NAME"
-git config --global user.email "YOUR EMAIL"
-```
+## 🔧 Configuration Commands
+| Command | Description |
+|---------|-------------|
+| `git config --global user.name "YOUR NAME"` | Set global username |
+| `git config --global user.email "YOUR EMAIL"` | Set global email |
+| `git config --global init.defaultBranch main` | Set default branch to `main` |
+| `git config --global --list` | List global configurations |
 
-## 📌 Set default branch to main
-```sh
-git config --global init.defaultBranch main
-```
+## ❓ Help Commands
+| Command | Description |
+|---------|-------------|
+| `git help COMMAND` | Get help on a specific command |
+| `git COMMAND -h` | Get short help for a command |
 
-## ❓ Get help on a command
-```sh
-git help COMMAND
-git COMMAND -h
-```
+## 🏗️ Repository Setup
+| Command | Description |
+|---------|-------------|
+| `git init` | Initialize a new Git repository |
+| `git clone REPOSITORY_URL` | Clone an existing repository |
 
-## 🏗️ Initialize a new git repository
-```sh
-git init
-```
+## 📂 Staging Files
+| Command | Description |
+|---------|-------------|
+| `git add FILE` | Add a specific file to staging |
+| `git add --all` / `git add -A` / `git add .` | Add all changes to staging |
 
-## 📥 Clone a repository
-```sh
-git clone REPOSITORY_URL
-```
+## 🔍 Checking Changes
+| Command | Description |
+|---------|-------------|
+| `git diff` | Show unstaged changes |
+| `git status` | Check the state of the working directory |
 
-## 📂 Add files to the staging area
-```sh
-git add FILE      # Add a specific file
-git add --all     # Add all file changes
-git add -A        # Add all file changes
-git add .         # Add all file changes
-```
+## ✅ Committing Changes
+| Command | Description |
+|---------|-------------|
+| `git commit -m "MESSAGE"` | Commit staged changes with a message |
 
-## 🔍 Check the unstaged changes
-```sh
-git diff
-```
+## ♻️ Resetting Changes
+| Command | Description |
+|---------|-------------|
+| `git reset` | Reset staging area to the last commit |
 
-## ✅ Commit the staged changes
-```sh
-git commit -m "MESSAGE"
-```
+## 🗑️ Removing and Renaming Files
+| Command | Description |
+|---------|-------------|
+| `git rm FILENAME` | Remove a file from Git |
+| `git mv OLD_NAME NEW_NAME` | Rename a file |
 
-## ♻️ Reset staging area to the last commit
-```sh
-git reset
-```
+## 📜 Branching
+| Command | Description |
+|---------|-------------|
+| `git branch` | List all local branches |
+| `git branch BRANCH_NAME` | Create a new branch |
+| `git branch -m NEW_BRANCH_NAME` | Rename the current branch |
+| `git branch -d BRANCH_NAME` | Delete a branch |
 
-## 📌 Check the state of the working directory and the staging area
-```sh
-git status
-```
+## 🔄 Switching & Merging Branches
+| Command | Description |
+|---------|-------------|
+| `git switch BRANCH_NAME` | Switch to another branch |
+| `git merge BRANCH_NAME` | Merge specified branch into current branch |
 
-## 🗑️ Remove a file from the index and working directory
-```sh
-git rm FILENAME
-```
+## 🌍 Remote Repository
+| Command | Description |
+|---------|-------------|
+| `git remote add NAME REPOSITORY_URL` | Connect to a remote repository |
+| `git push REMOTE BRANCH` | Push committed changes to a remote repository |
+| `git pull REMOTE` | Fetch and merge changes from a remote repository |
 
-## ✏️ Rename a file
-```sh
-git mv OLD_NAME NEW_NAME
-```
+## 🛠️ Additional Commands That Might Help
 
-## 📜 List the commit history
-```sh
-git log
-```
+### 🔄 Undoing & Fixing Mistakes
+| Command | Description |
+|---------|-------------|
+| `git checkout -- FILE` | Discard changes in working directory |
+| `git restore FILE` | Restore a file to the last committed state |
+| `git reset --soft HEAD~1` | Undo the last commit but keep changes staged |
+| `git reset --hard HEAD~1` | Undo the last commit and remove changes |
 
-## 🌿 List all the local branches
-```sh
-git branch
-```
+### 📜 Viewing Commit History
+| Command | Description |
+|---------|-------------|
+| `git log --oneline` | Show commit history in one line per commit |
+| `git log --graph --decorate --all` | Show a visual graph of commits |
 
-## 🌱 Create a new branch
-```sh
-git branch BRANCH_NAME
-```
-
-## ✏️ Rename the current branch
-```sh
-git branch -m NEW_BRANCH_NAME
-```
-
-## 🗑️ Delete a branch
-```sh
-git branch -d BRANCH_NAME
-```
-
-## 🔄 Switch to another branch
-```sh
-git switch BRANCH_NAME
-```
-
-## 🔀 Merge specified branch into the current branch
-```sh
-git merge BRANCH_NAME
-```
-
-## 🌍 Create a connection to a remote repository
-```sh
-git remote add NAME REPOSITORY_URL
-```
-
-## 🚀 Push the committed changes to a remote repository
-```sh
-git push REMOTE BRANCH
-```
-
-## 📥 Download the content from a remote repository
-```sh
-git pull REMOTE
+### 📌 Stashing Changes (Temporarily Save Work)
+| Command | Description |
+|---------|-------------|
+| `git stash` | Save uncommitted changes for later |
+| `git stash list` | Show saved stashes |
+| `git stash pop` | Restore the most recent stash |
